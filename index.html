@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghatampur Gaming Zone</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: #05070d;
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    color: #00f7ff;
+    text-shadow: 0 0 15px #00f7ff;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    border-radius: 15px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* COLORS */
+.yellow { border-color: gold; box-shadow: 0 0 15px gold; }
+.blue { border-color: #00f7ff; box-shadow: 0 0 15px #00f7ff; }
+.purple { border-color: violet; box-shadow: 0 0 15px violet; }
+.green { border-color: #00ff88; box-shadow: 0 0 15px #00ff88; }
+.orange { border-color: orange; box-shadow: 0 0 15px orange; }
+
+/* TEXT */
+.card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed #555;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 40px;
+    text-align: center;
+}
+.gallery h2 {
+    color: #00f7ff;
+    margin-bottom: 20px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.img-box {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #00f7ff;
+    box-shadow: 0 0 20px #00f7ff;
+    transition: 0.3s;
+}
+.img-box img {
+    width: 100%;
+}
+.img-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #00f7ff;
+}
+
+/* BOOKING */
+.booking {
+    text-align: center;
+    padding: 40px;
+}
+input, select {
+    padding: 10px;
+    margin: 8px;
+    width: 220px;
+}
+button {
+    padding: 10px 20px;
+    background: #00f7ff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+#msg {
+    margin-top: 10px;
+    color: #00ff88;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #00f7ff;
+}
+</style>
+</head>
+
+<body>
+
+<header>⚡ GHATAMPUR GAMING ZONE ⚡</header>
+
+<!-- RATE SECTION -->
+<div class="container">
+
+<div class="card yellow">
+<h2>Coins Machine</h2>
+<div class="item"><span>3 Coin</span><span>₹9</span></div>
+<div class="item"><span>7 Coin</span><span>₹19</span></div>
+<div class="item"><span>16 Coin</span><span>₹49</span></div>
+<div class="item"><span>30 Coin</span><span>₹99</span></div>
+</div>
+
+<div class="card blue">
+<h2>Console Price</h2>
+<div class="item"><span>PS3 30 min</span><span>₹39</span></div>
+<div class="item"><span>PS3 1 hr</span><span>₹59</span></div>
+<div class="item"><span>PS4 30 min</span><span>₹49</span></div>
+<div class="item"><span>PS4 1 hr</span><span>₹89</span></div>
+</div>
+
+<div class="card purple">
+<h2>Dual Player</h2>
+<div class="item"><span>PS3 1 hr</span><span>₹89</span></div>
+<div class="item"><span>PS4 1 hr</span><span>₹149</span></div>
+</div>
+
+<div class="card orange">
+<h2>Special Combo</h2>
+<div class="item"><span>PS3 2 hr</span><span>₹89</span></div>
+<div class="item"><span>PS4 2 hr</span><span>₹159</span></div>
+</div>
+
+<div class="card green">
+<h2>2 Player</h2>
+<div class="item"><span>PS3 2 hr</span><span>₹169</span></div>
+<div class="item"><span>PS4 2 hr</span><span>₹289</span></div>
+</div>
+
+<div class="card yellow">
+<h2>Coins Combo</h2>
+<div class="item"><span>60 Coins</span><span>₹169</span></div>
+<div class="item"><span>120 Coins</span><span>₹319</span></div>
+</div>
+
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+<h2>🎮 Our Gaming Arena</h2>
+
+<div class="gallery-grid">
+    <div class="img-box">
+        <img src="setup1.jpg">
+    </div>
+
+    <div class="img-box">
+        <img src="setup2.jpg">
+    </div>
+</div>
+</div>
+
+<!-- BOOKING -->
+<div class="booking">
+<h2>📅 Book Your Slot</h2>
+
+<input type="text" id="name" placeholder="Your Name"><br>
+
+<select id="game">
+<option>PS3</option>
+<option>PS4</option>
+<option>Coin Machine</option>
+</select><br>
+
+<input type="date" id="date"><br>
+<input type="time" id="time"><br>
+
+<button onclick="book()">Confirm Booking</button>
+
+<p id="msg"></p>
+</div>
+
+<footer>
+© 2026 Ghatampur Gaming Zone
+</footer>
+
+<script>
+function book(){
+    let n = document.getElementById("name").value;
+    let g = document.getElementById("game").value;
+    let d = document.getElementById("date").value;
+    let t = document.getElementById("time").value;
+
+    if(n=="" || d=="" || t==""){
+        document.getElementById("msg").innerText="Fill all fields!";
+        return;
+    }
+
+    let message = `🎮 Booking Request:
+Name: ${n}
+Game: ${g}
+Date: ${d}
+Time: ${t}`;
+
+    let phone = "919876543210"; // CHANGE THIS
+
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+
+    document.getElementById("msg").innerText = "Opening WhatsApp...";
+}
+</script>
+
+</body>
+</html>
